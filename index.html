@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uber $200 Gift Card</title>
+    <style>
+        /* CSS Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f39c12, #e74c3c);
+            color: white;
+            text-align: center;
+        }
+
+        .menu a {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 24px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .container {
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .image-section img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+            animation: bounce 2s infinite;
+        }
+
+        .claim-button a {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 1.2em;
+            animation: pulse 1.5s infinite;
+        }
+
+        .timer {
+            margin: 20px 0;
+            font-size: 1.2em;
+            color: #fff;
+        }
+
+        .reviews {
+            margin: 20px 0;
+            font-size: 1.1em;
+        }
+
+        .footer {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .popup {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background: #16a085;
+            padding: 10px 20px;
+            border-radius: 5px;
+            display: none;
+            color: white;
+            font-size: 1em;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-20px);
+            }
+            60% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 3 Line Button -->
+    <div class="menu">
+        <a href="https://optilinklock.com/1764733" target="_blank">&#9776;</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <div class="header">
+            <h1>Claim Your $200 Uber Gift Card!</h1>
+            <p>Limited time offer! Grab yours before it's gone!</p>
+        </div>
+        <div class="image-section">
+            <img src="https://i.ibb.co/rFtHwvr/b6304259b2b5.png" alt="Uber Gift Card">
+        </div>
+        <div class="claim-button">
+            <a href="https://optilinklock.com/1764733" target="_blank">Claim Now</a>
+        </div>
+        <div class="timer">
+            <p>Offer expires in:</p>
+            <div id="countdown"></div>
+        </div>
+        <div class="reviews">
+            <p>4,578 people already claimed!</p>
+            <p>⭐⭐⭐⭐⭐ - Excellent offer! Loved it! - Sarah</p>
+        </div>
+    </div>
+
+    <!-- Pop-Up Notification -->
+    <div class="popup" id="popup">
+        <p>🚀 Congrats! 4,578 users already claimed this offer!</p>
+    </div>
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <h3>Why Choose This Gift Card?</h3>
+        <ul>
+            <li>✅ 100% Safe and Guaranteed</li>
+            <li>✅ Easy to Use on Any Uber Service</li>
+            <li>✅ Limited Time & Limited Stock</li>
+        </ul>
+        <p>Register now to claim your $200 Uber Gift Card!</p>
+    </div>
+
+    <script>
+        /* JavaScript Code */
+
+        // Countdown Timer
+        const countdown = document.getElementById("countdown");
+        const endTime = new Date().getTime() + 24 * 60 * 60 * 1000; // 24 hours from now
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const timeLeft = endTime - now;
+
+            if (timeLeft > 0) {
+                const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+                countdown.innerHTML = `${hours}h ${minutes}m ${seconds}s`;
+            } else {
+                countdown.innerHTML = "Offer expired!";
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+
+        // Pop-Up Notification
+        const popup = document.getElementById("popup");
+        setTimeout(() => {
+            popup.style.display = "block";
+        }, 5000);
+    </script>
+</body>
+</html>
